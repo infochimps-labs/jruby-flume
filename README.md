@@ -29,21 +29,22 @@ Getting Started
 Follow the instructions to install flume plugins. Basically:
 
 1. Modify your flume-site.xml
-       <!--- ================================================= -->
-       <!--- Flume Plugins =================================== -->
-       <!--- ================================================= -->
-       <property>
-         <name>flume.plugin.classes</name>
-         <value>com.infochimps.flume.jruby.JRubyDecorator,com.infochimps.flume.jruby.JRubySource,com.infochimps.flume.jruby.JRubySink</value>
-         <description>List of plugin classes to load.</description>
-       </property>
+
+        <!--- ================================================= -->
+        <!--- Flume Plugins =================================== -->
+        <!--- ================================================= -->
+        <property>
+          <name>flume.plugin.classes</name>
+          <value>com.infochimps.flume.jruby.JRubyDecorator,com.infochimps.flume.jruby.JRubySource,com.infochimps.flume.jruby.JRubySink</value>
+          <description>List of plugin classes to load.</description>
+        </property>
 
 2. Ensure that both jruby.jar and jruby-flume.jar are on the FLUME_CLASSPATH
 when flume master and flume nodes are started. (Or, you can drop these jars in the /usr/lib/flume/lib directory...)
 
 3. Set up a flume data path:
 
-       node: jRubySource("/path/to/source.rb") | { jRubyDecorator("/path/to/decorator.rb") => jRubySink("/path/to/sink.rb") }
+        node: jRubySource("/path/to/source.rb") | { jRubyDecorator("/path/to/decorator.rb") => jRubySink("/path/to/sink.rb") }
 
 4. Enjoy!
 
