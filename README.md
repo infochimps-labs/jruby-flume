@@ -15,6 +15,16 @@ class that can act as the appropriate type of event processor. If all goes well,
 the node will start making calls to the ruby object whenever it needs to process
 an event.
 
+Blog Posts
+-----------------
+
+See
+
+* http://deathbydatadata.blogspot.com/2011/02/simple-flume-decorators-with-jruby.html
+* http://deathbydatadata.blogspot.com/2011/02/more-tricks-with-jruby-and-flume-and.html
+
+for example usage and a walkthrough.
+
 
 Dependencies
 ------------
